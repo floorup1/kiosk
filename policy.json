@@ -1,0 +1,17 @@
+{
+      "URLBlacklist": [
+                        "vk.com",
+                        "twitter.com",
+                        "ok.ru",
+                        "facebook.com",
+                        "youtube.com",
+                        "mail.ru"
+                      ],
+      "BookmarkBarEnabled": false,
+      "IncognitoModeAvailability": 1,
+      "TaskManagerEndProcessEnabled": false,
+       "ProxySettings":
+                {
+                        "ProxyMode": "direct"
+                }
+}
