@@ -5,7 +5,8 @@
                         "ok.ru",
                         "facebook.com",
                         "youtube.com",
-                        "mail.ru"
+                        "mail.ru",
+                        "chrome://*"
                       ],
       "BookmarkBarEnabled": false,
       "IncognitoModeAvailability": 1,
