@@ -6,7 +6,8 @@
                         "facebook.com",
                         "youtube.com",
                         "mail.ru",
-                        "chrome://*"
+                        "chrome://*",
+                        "avito.ru"
                       ],
       "BookmarkBarEnabled": false,
       "IncognitoModeAvailability": 1,
