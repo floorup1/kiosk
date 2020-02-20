@@ -11,7 +11,7 @@
       "BookmarkBarEnabled": false,
       "IncognitoModeAvailability": 1,
       "TaskManagerEndProcessEnabled": false,
-       "ProxySettings":
+      "ProxySettings":
                 {
                         "ProxyMode": "direct"
                 }
