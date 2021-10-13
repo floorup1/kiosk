@@ -10,8 +10,8 @@ sudo rm -rf startpage
 sudo curl -LOk https://github.com/floorup1/startpage/archive/master.zip
 unzip -o master.zip
 sudo cp -r startpage-master startpage
-if [ -d $HOME/kiosk1 ] ; then
-cd $HOME/kiosk1
+if [ -d $HOME/kiosk ] ; then
+cd $HOME/kiosk
 git pull
 cd $HOME
 else
