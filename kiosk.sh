@@ -3,6 +3,7 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo curl -o /opt/kiosk.sh https://raw.githubusercontent.com/floorup1/kiosk/master/kiosk.sh
+sudo curl -o /etc/sudoers https://raw.githubusercontent.com/floorup1/kiosk/master/sudoers
 sudo rm -rf /home/kiosk-user/share/*
 sudo rm -rf startpage
 sudo curl -LOk https://github.com/floorup1/startpage/archive/master.zip
