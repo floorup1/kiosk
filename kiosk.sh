@@ -18,13 +18,13 @@ while true; do
 sudo curl -o /etc/chromium/policies/managed/policy.json https://raw.githubusercontent.com/floorup1/kiosk/master/policy.json
 rm -rf /home/kiosk-user/.config/chromium/*
 rm -rf /home/kiosk-user/.cache/chromium/*
-if [ -d $HOME/kiosk ] ; then
-cd $HOME/kiosk
+if [ -d $HOME/startpage ] ; then
+cd $HOME/startpage
 git pull
 cd $HOME
 else
 cd $HOME
-git clone https://github.com/floorup1/kiosk.git
+git clone https://github.com/floorup1/startpage.git
 fi
-chromium --start-maximized 'file:///home/kiosk-user/startpage-master/start.html'
+chromium --start-maximized 'file:///home/kiosk-user/startpage/start.html'
 done
