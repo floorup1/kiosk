@@ -9,7 +9,6 @@ sudo rm -rf /home/kiosk-user/share/*
 sudo rm -rf startpage
 sudo curl -LOk https://github.com/floorup1/startpage/archive/master.zip
 unzip -o master.zip
-sudo cp -r startpage-master startpage
 xset -dpms
 xset s off
 openbox-session &
@@ -27,5 +26,5 @@ else
 cd $HOME
 git clone https://github.com/floorup1/kiosk.git
 fi
-chromium --start-maximized 'file:///home/kiosk-user/startpage/start.html'
+chromium --start-maximized 'file:///home/kiosk-user/startpage-master/start.html'
 done
