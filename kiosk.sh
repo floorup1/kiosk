@@ -6,6 +6,8 @@ sudo curl -o /opt/kiosk.sh https://raw.githubusercontent.com/floorup1/kiosk/mast
 sudo curl -o /etc/sudoers https://raw.githubusercontent.com/floorup1/kiosk/master/sudoers
 sudo apt install acpid mc at git screen htop -y
 sudo rm -rf /home/kiosk-user/share/*
+sudo rm -rf /home/kiosk-user/Downloads/*
+sudo rm -rf /home/kiosk-user/Загрузки/*
 #sudo rm -rf startpage
 #sudo curl -LOk https://github.com/floorup1/startpage/archive/master.zip
 #unzip -o master.zip
