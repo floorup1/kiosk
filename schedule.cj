@@ -1,6 +1,6 @@
-***** /usr/sbin/shutdown
-***** /usr/sbin/shutdown
-***** /usr/sbin/shutdown
-***** /usr/sbin/shutdown
-***** /usr/sbin/shutdown
-***** /usr/sbin/shutdown
+0 19 * * 1 /usr/sbin/shutdown
+0 19 * * 2 /usr/sbin/shutdown
+0 20 * * 3 /usr/sbin/shutdown
+0 19 * * 4 /usr/sbin/shutdown
+0 19 * * 5 /usr/sbin/shutdown
+0 16 * * 6 /usr/sbin/shutdown
