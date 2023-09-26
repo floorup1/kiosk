@@ -22,6 +22,7 @@ sudo curl -o /etc/chromium/policies/managed/policy.json https://raw.githubuserco
 sudo curl -o /opt/kiosk.sh https://raw.githubusercontent.com/floorup1/kiosk/master/kiosk.sh
 sudo curl -o /etc/sudoers https://raw.githubusercontent.com/floorup1/kiosk/master/sudoers
 sudo curl -o /opt/schedule.cronjob https://raw.githubusercontent.com/floorup1/kiosk/master/schedule.cronjob
+sudo crontab /opt/schedule.cronjob
 rm -rf /home/kiosk-user/.config/chromium/*
 rm -rf /home/kiosk-user/.cache/chromium/*
 if [ -d $HOME/startpage ] ; then
