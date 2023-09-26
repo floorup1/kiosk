@@ -8,7 +8,7 @@ if [ "$K1" -eq "0" ]; then
 	sudo sh -c "echo 'account required pam_time.so' >> /etc/pam.d/login"
 fi
 K2=$(grep -c "*;*;!root;MoTuThFr0700-1900|We0700-2000|Sa0700-1600" /etc/security/time.conf)
-if [ "$K1" -eq "0" ]; then
+if [ "$K2" -eq "0" ]; then
 	sudo sh -c "*;*;!root;MoTuThFr0700-1900|We0700-2000|Sa0700-1600' >> /etc/security/time.conf"
 fi
 sudo rm -rf /home/kiosk-user/share/*
