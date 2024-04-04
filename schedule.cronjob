@@ -1,4 +1,3 @@
-@reboot /usr/sbin/rm -rf /home/kiosk-user/.config/openbox/rc.xml
 @reboot /root/autostart.sh
 0 19 * * 1 /usr/sbin/shutdown
 0 19 * * 2 /usr/sbin/shutdown
