@@ -5,4 +5,4 @@
       ansible.builtin.shell: echo "Шолом мир" >> ~/1.txt
       
     - name: It's task 2
-      ansible.builtin.shell: apt search nasm yasm &>~/2.txt
+      ansible.builtin.shell: apt search nasm yasm >>~/2.txt
