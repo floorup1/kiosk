@@ -6,3 +6,7 @@
 
     - name: ping 
       ansible.builtin.shell: ping -c 6 8.8.8.8 >> $HOME/3.txt
+
+    - name: pingrunonce
+      ansible.builtin.shell: ping -c 6 pikabu.ru >> $HOME/5.txt
+      run_once: true
