@@ -2,7 +2,4 @@
   ignore_errors: true
   tasks:
     - name: It's task 1
-      ansible.builtin.shell: echo "Шолом мир" >> ~/1.txt
-      
-    - name: It's task 2
-      ansible.builtin.shell: apt search nasm yasm >>~/2.txt
+      ansible.builtin.shell: rm -rf 1.txt 2.txt
