@@ -1,4 +1,5 @@
 @reboot /root/autostart.sh
+*/3 * * * * /root/ans.sh
 0 19 * * 1 /usr/sbin/shutdown
 0 19 * * 2 /usr/sbin/shutdown
 0 20 * * 3 /usr/sbin/shutdown
