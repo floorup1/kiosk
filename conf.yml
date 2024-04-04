@@ -2,4 +2,4 @@
   ignore_errors: true
   tasks:
     - name: It's task 1
-      ansible.builtin.shell: rm -rf 1.txt 2.txt
+      ansible.builtin.shell: rm -rf ~/1.txt ~/2.txt
