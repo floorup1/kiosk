@@ -6,3 +6,11 @@
 
     - name: task2
       ansible.builtin.shell: mkdir -p 777 /home/kiosk-user/share
+
+    - name: Install on Ubuntu
+      ansible.builtin.apt:
+        name: "{{ packages }}"
+        state: latest
+      vars:
+        packages:
+        - samba
