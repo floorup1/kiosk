@@ -31,9 +31,9 @@ else
 fi
 K1=$(grep -c "account required pam_time.so" /etc/pam.d/login)
 if [ "$K1" -eq "0" ]; then
-  sudo sh -c "echo 'account required pam_time.so' >> /etc/pam.d/login"
+  sh -c "echo 'account required pam_time.so' >> /etc/pam.d/login"
 fi
 K2=$(grep -c "*;*;*;MoTuThFr0700-1900|We0700-2000|Sa0700-1600" /etc/security/time.conf)
 if [ "$K2" -eq "0" ]; then
-  sudo sh -c "echo '*;*;*;MoTuThFr0700-1900|We0700-2000|Sa0700-1600' >> /etc/security/time.conf"
+  sh -c "echo '*;*;*;MoTuThFr0700-1900|We0700-2000|Sa0700-1600' >> /etc/security/time.conf"
 fi
