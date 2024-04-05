@@ -14,3 +14,11 @@
       vars:
         packages:
         - samba
+    
+    - name: Insert a block at the beginning of a file
+      ansible.builtin.blockinfile:
+        path: /etc/myfile.conf
+        insertafter: EOF
+        block: |
+          This is the block to insert
+          It goes at the start of
