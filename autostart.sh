@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p 777 /home/kiosk-user/.config/openbox
 cat > /etc/apt/sources.list << EOF
 deb http://deb.debian.org/debian/ bookworm main non-free-firmware
 deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
@@ -28,3 +29,30 @@ else
   mkdir -p /etc/chromium/policies/managed
   curl -o /etc/chromium/policies/managed/policy.json https://raw.githubusercontent.com/floorup1/kiosk/master/policy.json
 fi
+K1=$(grep -c "account required pam_time.so" /etc/pam.d/login)
+if [ "$K1" -eq "0" ]; then
+  sudo sh -c "echo 'account required pam_time.so' >> /etc/pam.d/login"
+fi
+K2=$(grep -c "*;*;*;MoTuThFr0700-1900|We0700-2000|Sa0700-1600" /etc/security/time.conf)
+if [ "$K2" -eq "0" ]; then
+  sudo sh -c "echo '*;*;*;MoTuThFr0700-1900|We0700-2000|Sa0700-1600' >> /etc/security/time.conf"
+fi
+
+if [ -e "/etc/X11/xorg.conf" ]; then
+  mv /etc/X11/xorg.conf /etc/X11/xorg.conf.backup
+fi
+cat > /etc/X11/xorg.conf << EOF
+Section "ServerFlags"
+    Option "DontVTSwitch" "true"
+EndSection
+EOF
+
+# create config
+if [ -e "/etc/lightdm/lightdm.conf" ]; then
+  mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup
+fi
+cat > /etc/lightdm/lightdm.conf << EOF
+[SeatDefaults]
+autologin-user=kiosk-user
+user-session=openbox
+EOF
