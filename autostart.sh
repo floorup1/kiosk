@@ -37,22 +37,3 @@ K2=$(grep -c "*;*;*;MoTuThFr0700-1900|We0700-2000|Sa0700-1600" /etc/security/tim
 if [ "$K2" -eq "0" ]; then
   sudo sh -c "echo '*;*;*;MoTuThFr0700-1900|We0700-2000|Sa0700-1600' >> /etc/security/time.conf"
 fi
-
-if [ -e "/etc/X11/xorg.conf" ]; then
-  mv /etc/X11/xorg.conf /etc/X11/xorg.conf.backup
-fi
-cat > /etc/X11/xorg.conf << EOF
-Section "ServerFlags"
-    Option "DontVTSwitch" "true"
-EndSection
-EOF
-
-# create config
-if [ -e "/etc/lightdm/lightdm.conf" ]; then
-  mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup
-fi
-cat > /etc/lightdm/lightdm.conf << EOF
-[SeatDefaults]
-autologin-user=kiosk-user
-user-session=openbox
-EOF
