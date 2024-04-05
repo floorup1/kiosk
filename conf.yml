@@ -17,7 +17,7 @@
     
     - name: Insert a block at the beginning of a file
       ansible.builtin.blockinfile:
-        path: /home/kiosk-user/myfile.conf
+        path: /home/kiosk-user/myfile.html
         insertafter: EOF
         block: |
           This is the block to insert
