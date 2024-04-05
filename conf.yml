@@ -15,9 +15,9 @@
         packages:
         - samba
     
-    - name: Insert a block at the beginning of a file
+    - name: Insert a block after EOF
       ansible.builtin.blockinfile:
-        path: /home/kiosk-user/myfile.html
+        path: /etc/samba/smb.conf
         insertafter: EOF
         block: |
           [share]
