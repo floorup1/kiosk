@@ -1,0 +1,13 @@
+#!/bin/bash
+xset s off -dpms
+while true; do
+if [ -d $HOME/startpage ]; then
+  cd $HOME/startpage
+  git pull
+  cd $HOME
+  else
+  cd $HOME
+  git clone https://github.com/floorup1/startpage.git
+fi
+chromium --start-maximized 'file:///home/kiosk-user/startpage/start.html'
+done
