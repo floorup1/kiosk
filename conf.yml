@@ -20,5 +20,11 @@
         path: /home/kiosk-user/myfile.html
         insertafter: EOF
         block: |
-          This is the block to insert
-          It goes at the start of
+          [share]
+          comment = share
+          path = /home/kiosk-user/share
+          browseable = yes
+          guest ok = yes
+          create mode = 0766
+          writeable = yes
+          force user = kiosk-user
