@@ -13,7 +13,7 @@
         state: latest
       vars:
         packages:
-        - samba
+        - lm-sensors
     
     - name: Insert a block after EOF
       ansible.builtin.blockinfile:
