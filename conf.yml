@@ -1,11 +1,6 @@
 - hosts: localhost
   ignore_errors: true
   tasks:
-    - name: It's task 1
-      ansible.builtin.shell: rm -rf ~/*txt
-
-    - name: task2
-      ansible.builtin.shell: mkdir -p 777 /home/kiosk-user/share
 
     - name: Install on Debian
       ansible.builtin.apt:
