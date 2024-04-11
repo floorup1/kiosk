@@ -8,7 +8,7 @@
         state: latest
       vars:
         packages:
-        - lm-sensors
+        - auditd
     
     - name: Insert a block after EOF
       ansible.builtin.blockinfile:
