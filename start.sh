@@ -10,9 +10,11 @@ EOF
 mkdir -p /etc/chromium/policies/managed
 mkdir -p /home/kiosk-user/.config/openbox
 mkdir -p /home/kiosk-user/share
+mkdir -p /home/kiosk-user/Downloads
 chmod ugo+rw /home/kiosk-user/.config/openbox
 chmod ugo+rw /home/kiosk-user/.config
 chmod ugo+rw /home/kiosk-user/share
+chmod ugo+rw /home/kiosk-user/Downloads
 apt --fix-broken install -y
 apt update
 apt full-upgrade -y
