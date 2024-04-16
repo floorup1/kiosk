@@ -1,4 +1,5 @@
 #!/bin/bash
+#Правка sources.list
 cat > /etc/apt/sources.list << EOF
 deb http://deb.debian.org/debian/ bookworm main non-free-firmware
 deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
@@ -7,19 +8,23 @@ deb-src http://security.debian.org/debian-security bookworm-security main non-fr
 deb http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
 deb-src http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
 EOF
+#создание каталогов
 mkdir -p /etc/chromium/policies/managed
 mkdir -p /home/kiosk-user/.config/openbox
 mkdir -p /home/kiosk-user/share
 mkdir -p /home/kiosk-user/Downloads
+#права на созданные каталоги
 chmod ugo+rw /home/kiosk-user/.config/openbox
 chmod ugo+rw /home/kiosk-user/.config
 chmod ugo+rw /home/kiosk-user/share
 chmod ugo+rw /home/kiosk-user/Downloads
+#apt и прочее
 apt --fix-broken install -y
 apt update
 apt full-upgrade -y
 apt autoremove
 apt install acpid auditd mc pcmanfm openbox lightdm curl git ansible cups samba xorg chromium chromium-l10n -y
+#загрузка 
 curl -o $HOME/autostart.sh https://raw.githubusercontent.com/floorup1/kiosk/master/autostart.sh
 curl -o $HOME/ans.sh https://raw.githubusercontent.com/floorup1/kiosk/master/ans.sh
 curl -o /home/kiosk-user/.config/openbox/autostart https://raw.githubusercontent.com/floorup1/kiosk/master/autostart
