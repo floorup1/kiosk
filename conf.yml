@@ -2,14 +2,6 @@
   ignore_errors: true
   tasks:
 
-    - name: Install on Debian
-      ansible.builtin.apt:
-        name: "{{ packages }}"
-        state: latest
-      vars:
-        packages:
-        - auditd
-    
     - name: Insert a block after EOF
       ansible.builtin.blockinfile:
         path: /etc/samba/smb.conf
