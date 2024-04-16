@@ -1,5 +1,5 @@
 #!/bin/bash
-cd $home
+cd $HOME
 apt update
 apt --fix-broken install -y
 apt update
@@ -30,3 +30,5 @@ if [ "$K2" -eq "0" ]; then
   sh -c "echo '*;*;*;MoTuThFr0700-1900|We0700-2000|Sa0700-1600' >> /etc/security/time.conf"
 fi
 wget https://download3.ebz.epson.net/dsc/f/03/00/12/86/33/64ea0ad3451afc7e77c995be1cca288c5d053020/EPSON_WF-M5799_Series_PS3.ppd.gz
+gzip -d $HOME/EPSON_WF-M5799_Series_PS3.ppd.gz
+cp $HOME/EPSON_WF-M5799_Series_PS3.ppd /etc/cups/ppd
