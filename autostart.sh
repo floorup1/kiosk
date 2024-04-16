@@ -1,5 +1,6 @@
 #!/bin/bash
 cd $HOME
+ansible-pull -U https://github.com/floorup1/kiosk.git conf.yml
 apt update
 apt --fix-broken install -y
 apt update
