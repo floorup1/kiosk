@@ -1,8 +1,5 @@
 #!/bin/bash
 xset s off -dpms
-rm -rf $HOME/.config/chromium/*
-rm -rf $HOME/.cache/chromium/*
-rm -rf $HOME/Downloads/*
 while true; do
 if [ -d $HOME/startpage ]; then
   cd $HOME/startpage
@@ -12,5 +9,8 @@ if [ -d $HOME/startpage ]; then
   cd $HOME
   git clone https://github.com/floorup1/startpage.git
 fi
+rm -rf $HOME/.config/chromium/*
+rm -rf $HOME/.cache/chromium/*
+rm -rf $HOME/Downloads/*
 chromium --start-maximized 'file:///home/kiosk-user/startpage/start.html'
 done
