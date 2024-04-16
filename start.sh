@@ -9,6 +9,7 @@ deb-src http://security.debian.org/debian-security bookworm-security main non-fr
 deb http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
 deb-src http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
 EOF
+mkdir -p /etc/chromium/policies/managed
 mkdir -p 777 /home/kiosk-user/.config/openbox
 chmod ugo+rw /home/kiosk-user/.config/openbox
 apt --fix-broken install -y
