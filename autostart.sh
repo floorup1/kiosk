@@ -12,8 +12,8 @@ curl -o /home/kiosk-user/.config/openbox/autostart https://raw.githubusercontent
 curl -o /home/kiosk-user/.config/openbox/rc.xml https://raw.githubusercontent.com/floorup1/kiosk/master/rc.xml
 chmod +x $HOME/autostart.sh
 chmod +x $HOME/ans.sh
-chmod ugo+rwx /home/kiosk-user/.config/openbox/autostart
-chmod ugo+rw /home/kiosk-user/.config/openbox/rc.xml
+#chmod ugo+rwx /home/kiosk-user/.config/openbox/autostart
+#chmod ugo+rw /home/kiosk-user/.config/openbox/rc.xml
 curl -o $HOME/schedule.cronjob  https://raw.githubusercontent.com/floorup1/kiosk/master/schedule.cronjob
 crontab $HOME/schedule.cronjob
 if [ -d /etc/chromium/policies/managed ]; then
