@@ -11,7 +11,9 @@ deb-src http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
 EOF
 mkdir -p /etc/chromium/policies/managed
 mkdir -p 777 /home/kiosk-user/.config/openbox
+mkdir -p 777 /home/kiosk-user/share
 chmod ugo+rw /home/kiosk-user/.config/openbox
+chmod ugo+rw /home/kiosk-user/share
 apt --fix-broken install -y
 apt update
 apt full-upgrade -y
