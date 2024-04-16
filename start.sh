@@ -11,20 +11,19 @@ mkdir -p /etc/chromium/policies/managed
 mkdir -p /home/kiosk-user/.config/openbox
 mkdir -p /home/kiosk-user/share
 chmod ugo+rw /home/kiosk-user/.config/openbox
+chmod ugo+rw /home/kiosk-user/.config
 chmod ugo+rw /home/kiosk-user/share
 apt --fix-broken install -y
 apt update
 apt full-upgrade -y
 apt autoremove
-apt install acpid mc pcmanfm openbox lightdm curl git ansible cups samba xorg chromium chromium-l10n -y
+apt install acpid auditd mc pcmanfm openbox lightdm curl git ansible cups samba xorg chromium chromium-l10n -y
 curl -o $HOME/autostart.sh https://raw.githubusercontent.com/floorup1/kiosk/master/autostart.sh
 curl -o $HOME/ans.sh https://raw.githubusercontent.com/floorup1/kiosk/master/ans.sh
 curl -o /home/kiosk-user/.config/openbox/autostart https://raw.githubusercontent.com/floorup1/kiosk/master/autostart
 curl -o /home/kiosk-user/.config/openbox/rc.xml https://raw.githubusercontent.com/floorup1/kiosk/master/rc.xml
 chmod +x $HOME/autostart.sh
 chmod +x $HOME/ans.sh
-chmod 777 /home/kiosk-user/.config
-chmod 777 /home/kiosk-user/.config/openbox
 chmod ugo+rwx /home/kiosk-user/.config/openbox/autostart
 chmod ugo+rw /home/kiosk-user/.config/openbox/rc.xml
 curl -o $HOME/schedule.cronjob  https://raw.githubusercontent.com/floorup1/kiosk/master/schedule.cronjob
