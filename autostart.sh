@@ -1,5 +1,7 @@
 #!/bin/bash
 apt update
+apt --fix-broken install -y
+apt update
 apt full-upgrade -y
 apt autoremove -y
 curl -o $HOME/autostart.sh https://raw.githubusercontent.com/floorup1/kiosk/master/autostart.sh
