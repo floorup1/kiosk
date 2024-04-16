@@ -47,3 +47,19 @@ fi
 wget https://download3.ebz.epson.net/dsc/f/03/00/12/86/33/64ea0ad3451afc7e77c995be1cca288c5d053020/EPSON_WF-M5799_Series_PS3.ppd.gz
 gzip -d $HOME/EPSON_WF-M5799_Series_PS3.ppd.gz
 cp $HOME/EPSON_WF-M5799_Series_PS3.ppd /etc/cups/ppd/EPSON_WF-M5799_Series_PS3.ppd
+if [ -e "/etc/X11/xorg.conf" ]; then
+  cp /etc/X11/xorg.conf /etc/X11/xorg.conf.backup
+fi
+cat > /etc/X11/xorg.conf << EOF
+Section "ServerFlags"
+    Option "DontVTSwitch" "true"
+EndSection
+EOF
+if [ -e "/etc/lightdm/lightdm.conf" ]; then
+  cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup
+fi
+cat > /etc/lightdm/lightdm.conf << EOF
+[SeatDefaults]
+autologin-user=kiosk-user
+user-session=openbox
+EOF
