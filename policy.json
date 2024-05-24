@@ -13,5 +13,8 @@
       "ProxySettings":
                 {
                         "ProxyMode": "direct"
-                }
+                },
+      "DefaultSearchProviderEnabled": true,
+      "DefaultSearchProviderName": "Yandex",
+      "DefaultSearchProviderNewTabURL": "https://yandex.ru"
 }
