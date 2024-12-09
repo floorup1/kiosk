@@ -5,8 +5,8 @@ apt update
 apt --fix-broken install -y
 apt update
 apt full-upgrade -y
-#apt autoremove -y
-apt install chromium -y
+apt autoremove -y
+#apt install chromium -y
 curl -o $HOME/autostart.sh https://raw.githubusercontent.com/floorup1/kiosk/master/autostart.sh
 curl -o $HOME/ans.sh https://raw.githubusercontent.com/floorup1/kiosk/master/ans.sh
 curl -o /home/kiosk-user/.config/openbox/autostart https://raw.githubusercontent.com/floorup1/kiosk/master/autostart
