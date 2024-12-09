@@ -620,8 +620,8 @@
     </mousebind>
     <mousebind button="A-Down" action="Click">
       <action name="GoToDesktop"><to>next</to></action>
-    </mousebind>
-  </context> -->
+    </mousebind> -->
+  </context> 
 </mouse>
 
 <menu>
