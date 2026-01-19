@@ -5,4 +5,4 @@
 0 20 * * 3 /usr/sbin/shutdown
 0 19 * * 4 /usr/sbin/shutdown
 0 19 * * 5 /usr/sbin/shutdown
-0 16 * * 6 /usr/sbin/shutdown
+0 14 * * 6 /usr/sbin/shutdown
