@@ -1,13 +1,13 @@
 #!/bin/bash
 #Правка sources.list
-cat > /etc/apt/sources.list << EOF
-deb http://deb.debian.org/debian/ bookworm main non-free-firmware
-deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
-deb http://security.debian.org/debian-security bookworm-security main non-free-firmware
-deb-src http://security.debian.org/debian-security bookworm-security main non-free-firmware
-deb http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
-deb-src http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
-EOF
+#cat > /etc/apt/sources.list << EOF
+#deb http://deb.debian.org/debian/ bookworm main non-free-firmware
+#deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
+#deb http://security.debian.org/debian-security bookworm-security main non-free-firmware
+#deb-src http://security.debian.org/debian-security bookworm-security main non-free-firmware
+#deb http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
+#deb-src http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
+#EOF
 #создание каталогов
 mkdir -p /etc/chromium/policies/managed
 mkdir -p /home/kiosk-user/.config/openbox
